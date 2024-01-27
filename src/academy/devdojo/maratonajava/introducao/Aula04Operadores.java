@@ -2,7 +2,7 @@ package academy.devdojo.maratonajava.introducao;
 
 public class Aula04Operadores {
     public static void main(String[] args) {
-        // Operadores aritméticos  + - * /
+        // Aula 15 Operadores aritméticos  + - * /
         int numero01 = 10;
         int numero02 = 20;
         double soma = numero01 + numero02;
@@ -35,7 +35,7 @@ public class Aula04Operadores {
         System.out.println("isDentroDaLeiMaiorQueTrinta: " +isDentroDaLeiMaiorQueTrinta);
         System.out.println("isDentroDaLeiMenorQueTrinta: " +isDentroDaLeiMenorQueTrinta);
 
-        // Operadores Lógicos:
+        // Aula 18 Operadores Lógicos:
         // Temos o (AND) && , (OR) || e (NO) !
         double valorTotalContaCorrente = 200;
         double valorTotalContaPoupanca = 10000;
@@ -45,6 +45,30 @@ public class Aula04Operadores {
         System.out.println("isPlaystationCincoCompravel: "+isPlaystationCincoCompravel);
 
 
+        // Aula 19 Operadores de atribuição
+        // = += *= /= %=
+        double bonus = 1800;
+        double resultadoMais = bonus += 1000;         //equivalente a bonus = bonus + 1000;
+        double resultadoMenos = bonus -= 1000;         //equivalente a bonus = bonus - 1000;
+        double resultadoVezes = bonus *= 2;         //equivalente a bonus = bonus * 2;
+        double resultadoDividir = bonus /= 2;         //equivalente a bonus = bonus / 2;
+        double resultadoResto = bonus %= 2;         //equivalente a bonus = bonus % 2;
+        System.out.println("bonusMais: " +resultadoMais);
+        System.out.println("bonusMenos: " +resultadoMenos);
+        System.out.println("bonusVezes: " +resultadoVezes);
+        System.out.println("bonusDividir: " +resultadoDividir);
+        System.out.println("bonusResto: " +resultadoResto);
 
+        // Operadores de decremento e incremento
+        int contador = 0;
+        contador += 1;  // contador = contador + 1
+        contador++;
+        contador--;
+        ++contador;
+        --contador;
+        System.out.println(contador);
+
+        int contador2 = 0;
+        System.out.println(++contador2);
     }
 }
