@@ -30,5 +30,13 @@ public class Aula08ArraysMultidimensionais01 {
             }
         }
 
+        System.out.println("----------------------------");
+        // criando uma variavel de referencia (array base) que aponta para o array dias
+        for(int[] arrBase: dias){
+            for(int num: arrBase){
+                System.out.println(num);
+            }
+        }
+
     }
 }
