@@ -29,6 +29,7 @@ public class Aula05EstruturasCondicionais05 {
                 break;
             default:
                 System.out.println("Opção inválida!");
+                break;
         }
 
 
@@ -39,6 +40,7 @@ public class Aula05EstruturasCondicionais05 {
                 break;
             default: // a posição do default não interfere no resultado
                 System.out.println("Inválido");
+                break;
             case 'F':
                 System.out.println("Feminino");
                 break;
