@@ -22,8 +22,10 @@ public class Aula06EstruturasDeRepeticao04 {
             double valorParcela = valorCarro / parcela;
             if(valorParcela >= 1000){
                 System.out.println(parcela+ " parcela(s) de R$ "+valorParcela);
+            }else{
+                break;
             }
-            System.out.println("Fora do if, mas dentro do for "+parcela); // solucao nao ok, pq executa até chegar no valor total do carro
+            System.out.println("Fora do if, mas dentro do for "+parcela); // solucao ok por conta do uso do break
         }
 
 
