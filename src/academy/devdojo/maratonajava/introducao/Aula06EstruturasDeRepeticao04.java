@@ -18,18 +18,6 @@ public class Aula06EstruturasDeRepeticao04 {
         System.out.println("--------------------------------");
 
         System.out.println("---- Solução William Suane ----");
-        /*  solução ok
-        for(int parcela = 1; parcela <= valorCarro; parcela++){
-            double valorParcela = valorCarro / parcela;
-            if(valorParcela >= 1000){
-                System.out.println(parcela+ " parcela(s) de R$ "+valorParcela);
-            }else{
-                break;
-            }
-            System.out.println("Fora do if, mas dentro do for "+parcela); // solucao ok por conta do uso do break
-        }
-        */
-        // mesma solução, só que mais enxuta
         for(int parcela = 1; parcela <= valorCarro; parcela++){
             double valorParcela = valorCarro / parcela;
             if(valorParcela < 1000){
