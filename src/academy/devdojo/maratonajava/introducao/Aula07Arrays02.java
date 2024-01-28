@@ -28,10 +28,16 @@ public class Aula07Arrays02 {
         System.out.println(abcd[2]);
 
         System.out.println("-----------------");
-        String[] abcde = new String[3];
+        String[] nomes = new String[4];
+        nomes[0] = "Luna";
+        nomes[1] = "Batista";
+        nomes[2] = "Silva";
+        nomes[3] = "Peres";
+
         // imprimindo o valor em cada posição do array
-        System.out.println(abcde[0]);
-        System.out.println(abcde[1]);
-        System.out.println(abcde[2]);
+        for(int i = 0; i < nomes.length; i++){
+            System.out.println(nomes[i]);
+        }
+
     }
 }
