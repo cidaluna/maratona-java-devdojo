@@ -15,6 +15,10 @@ public class Funcionario {
     }
 
     public void imprimeSolucaoWilliamSuane(Funcionario funcionario) {
+        // adicionando if como boa pratica para checar se existe salário
+        if(salario == null){
+            return; // se for null, cai aqui e já sai fora desse método!
+        }
         System.out.println(funcionario.nome);
         System.out.println(funcionario.idade);
         for(double cada: salario) {
@@ -33,6 +37,10 @@ public class Funcionario {
     }
 
     public void mediaSalariosSuane(){  // solucao metodo VOID
+        // adicionando if como boa pratica para checar se existe salário
+        if(salario == null){
+            return; // se for null, cai aqui e já sai fora desse método!
+        }
         double media = 0;
         for(double item: salario) {
             media += item;
