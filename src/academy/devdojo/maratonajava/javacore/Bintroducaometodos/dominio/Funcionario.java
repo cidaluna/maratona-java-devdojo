@@ -6,7 +6,7 @@ public class Funcionario {
     public int idade;
     public double[] salario;
 
-    public void imprime(Funcionario funcionario) {
+    public void imprimeSolucaoCidaLuna(Funcionario funcionario) {
         System.out.println(funcionario.nome);
         System.out.println(funcionario.idade);
         for (int i = 0; i < (funcionario.salario).length; i++) {
@@ -14,7 +14,15 @@ public class Funcionario {
         }
     }
 
-    public double mediaSalarios(Funcionario funcionario) {
+    public void imprimeSolucaoWilliamSuane(Funcionario funcionario) {
+        System.out.println(funcionario.nome);
+        System.out.println(funcionario.idade);
+        for(double cada: salario) {
+            System.out.println(cada);
+        }
+    }
+
+    public double mediaSalariosCida(Funcionario funcionario) {
         double soma = 0;
         double media = 0;
         for (int i = 0; i < (funcionario.salario).length; i++) {
@@ -22,5 +30,14 @@ public class Funcionario {
             media = (soma / 3);
         }
         return media;
+    }
+
+    public void mediaSalariosSuane(){  // solucao metodo VOID
+        double media = 0;
+        for(double item: salario) {
+            media += item;
+        }
+        media /= salario.length;
+        System.out.println("Média salarial Suane: "+ media);
     }
 }
