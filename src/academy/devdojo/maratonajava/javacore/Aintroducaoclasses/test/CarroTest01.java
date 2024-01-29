@@ -16,6 +16,7 @@ public class CarroTest01 {
         carro2.ano = 1968;
         carro2.modelo = "GT 500";
 
+        carro2 = carro1;
         System.out.println("Carro 1: ");
         System.out.println(carro1.nome);
         System.out.println(carro1.modelo);
