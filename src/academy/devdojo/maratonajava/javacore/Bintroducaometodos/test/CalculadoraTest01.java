@@ -11,5 +11,6 @@ public class CalculadoraTest01 {
         System.out.println("Finalizando CalculadoraTest01");
 
         calculadora.subtraiDoisMetodos();
+        calculadora.multiplicaDoisNumeros(5,7);
     }
 }
