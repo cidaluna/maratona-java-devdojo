@@ -10,7 +10,7 @@ public class CarroTest01 {
         Carro c2 = new Carro("Mercedes", 275);
         Carro c3 = new Carro("Audi", 290);
 
-        Carro.velocidadeLimite = 180; // vai afetar sobrescrever todos os objetos da classe Carro
+        Carro.setVelocidadeLimite(180); // vai afetar sobrescrever todos os objetos da classe Carro
         // mesmo se nao existir nenhum objeto instanciado, Carro.velocidadeLimite existe e pode ser impresso se desejar
         c1.imprime();
         c2.imprime();
