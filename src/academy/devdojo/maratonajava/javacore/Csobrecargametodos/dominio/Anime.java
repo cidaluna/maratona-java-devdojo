@@ -19,16 +19,14 @@ public class Anime {
         return nome;
     }
 
-    // sobrecarga é ter métodos com o mesmo nome porém com qtd de argumentos ou tipo do arg diferentes
+    // sobrecarga é ter métodos com o mesmo nome porém com qtd de parâmetros ou tipo do param diferentes
     public void init(String nome, String tipo, int episodios){
         this.nome = nome;
         this.tipo = tipo;
         this.episodios = episodios;
     }
     public void init(String nome, String tipo, int episodios, String genero){
-        this.nome = nome;
-        this.tipo = tipo;
-        this.episodios = episodios;
+        this.init(nome, tipo, episodios);
         this.genero = genero;
     }
     public void setNome(String nome) {
