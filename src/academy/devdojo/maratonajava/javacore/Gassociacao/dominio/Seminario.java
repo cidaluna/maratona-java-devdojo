@@ -15,6 +15,10 @@ public class Seminario {
         this.alunos = alunos;
     }
 
+    public Seminario(String titulo, Local local){
+        this.titulo = titulo;
+        this.local = local;
+    }
     // construtor sobrecarregado com os 3 argumentos
     public Seminario(String titulo, Aluno[] alunos, Local local) {
         this.titulo = titulo;
