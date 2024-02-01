@@ -5,17 +5,6 @@ public class Escola {
     private String nome;
     private Professor[] professores;
 
-    public void imprime(){
-        System.out.println("Nome da Escola: "+ this.nome);  // nome dad escola
-        if(professores == null){
-            return;
-        }
-        System.out.println("Nome dos Professor(es): ");
-        for(Professor professor: professores){
-            System.out.print(professor.getNome() + ", ");
-        }
-    }
-
     // construtor nome da escola e os nomes dos professores
     public Escola(String nome, Professor[] professores) {
         this.nome = nome;
@@ -33,5 +22,16 @@ public class Escola {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void imprime(){
+        System.out.println("Nome da Escola: "+ this.nome);  // nome dad escola
+        if(professores == null){
+            return;
+        }
+        System.out.println("Nome dos Professor(es): ");
+        for(Professor professor: professores){
+            System.out.print(professor.getNome() + ", ");
+        }
     }
 }
