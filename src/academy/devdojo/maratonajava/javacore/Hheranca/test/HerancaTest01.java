@@ -11,16 +11,14 @@ public class HerancaTest01 {
         endereco.setRua("Rua 18");
         endereco.setCep("012354-67");
 
-        Pessoa pessoa = new Pessoa();
-        pessoa.setNome("Toyohisa Shimazu");
+        Pessoa pessoa = new Pessoa("Toyohisa Shimazu");
         pessoa.setCpf("111111");
         pessoa.setEndereco(endereco);
         pessoa.imprime();
         // Obs aqui nesta classe main, por ela estar fora do pacote de Pessoa, não é possível acessar direto, pessoa.nome
 
         System.out.println("-----------------");
-        Funcionario func = new Funcionario();
-        func.setNome("Oda Nobunaga");
+        Funcionario func = new Funcionario("Oda Nobunaga");
         func.setCpf("2222222");
         func.setEndereco(endereco);
         func.setSalario(8000);

@@ -3,10 +3,24 @@ package academy.devdojo.maratonajava.javacore.Hheranca.dominio;
 public class Funcionario extends Pessoa {
     // Funcionário é uma pessoa, logo ele herda os atributos e métodos de Pessoa
     // Herança é acoplamento muito forte
+    // protected é um modificador que dá acesso a todas as variáveis(atributos), subclasses
 
     private double salario;
+    static{
+        System.out.println("Dentro do bloco de inicialização estático de funcionario");
+    }
+    {
+        System.out.println("Bloco de inicialização não estático funcionario 1!");
+    }
+    {
+        System.out.println("Bloco de inicialização não estático funcionario 2!");
+    }
 
-    // protected é um modificador que dá acesso a todas as variáveis(atributos), subclasses
+    // construtor
+    public Funcionario(String nome){
+        super(nome);  // chama o construtor da super classe Pessoa, que já possui o argumento nome
+        System.out.println("Dentro do construtor de funcionario");
+    }
 
     // sobrescrita de método
     public void imprime(){
