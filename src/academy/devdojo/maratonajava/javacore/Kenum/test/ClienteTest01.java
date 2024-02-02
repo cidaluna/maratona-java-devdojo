@@ -15,5 +15,17 @@ public class ClienteTest01 {
 
         System.out.println(TipoPagamento.DEBITO.calcularDesconto(100));
         System.out.println(TipoPagamento.CREDITO.calcularDesconto(100));
+
+        // recuperando o nome do relatório enviado
+        TipoCliente tipoCliente1 = TipoCliente.valueOf("PESSOA_FISICA");
+        System.out.println(tipoCliente1.getNomeRelatorio());
+
+        // recuperando o tipo de cliente baseado no tipo de relatório enviado exemplo ok
+        TipoCliente tipoCliente2 = TipoCliente.tipoClientePorNomeRelatorio("Pessoa Física");
+        System.out.println(tipoCliente2);
+
+        // recuperando o tipo de cliente baseado no tipo de relatório enviado exemplo passando um valor nao existe
+        TipoCliente tipoCliente3 = TipoCliente.tipoClientePorNomeRelatorio("Pessoa física 123");  // retorna null
+        System.out.println(tipoCliente3);
     }
 }
