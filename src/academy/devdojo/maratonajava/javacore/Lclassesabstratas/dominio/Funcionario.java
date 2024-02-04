@@ -11,13 +11,9 @@ public abstract class Funcionario {
     public Funcionario(String nome, double salario) {
         this.nome = nome;
         this.salario = salario;
+        calculaBonus();  // todos que extenderem esta classe irão chamar o método abstrato e o objeto executa
     }
 
-    @Override
-    public String toString() {
-        return "Funcionario{" +
-                "nome='" + nome + '\'' +
-                ", salario=" + salario +
-                '}';
-    }
+    public abstract void calculaBonus();   // quem executa este método é sempre o objeto
+
 }
