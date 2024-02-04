@@ -12,5 +12,8 @@ public class FuncionarioTest01 {
 
         Desenvolvedor dev = new Desenvolvedor("Toya", 12000);
         System.out.println(dev);
+
+        gerente.imprime();
+        dev.imprime();
     }
 }

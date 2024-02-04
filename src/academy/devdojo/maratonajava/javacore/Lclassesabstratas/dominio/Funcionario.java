@@ -1,6 +1,6 @@
 package academy.devdojo.maratonajava.javacore.Lclassesabstratas.dominio;
 
-public abstract class Funcionario {
+public abstract class Funcionario extends Pessoa{
     // classe abstrata foi criada para ser uma super classe
     // não podemos criar objetos de uma classe abstrata, ou seja,
     // os objetos criados nao podem ter new Funcionario, e sim, devem ter o new da classe filha
@@ -16,4 +16,8 @@ public abstract class Funcionario {
 
     public abstract void calculaBonus();   // quem executa este método é sempre o objeto
 
+    @Override
+    public void imprime() {
+        System.out.println("Imprimindo...");
+    }
 }
