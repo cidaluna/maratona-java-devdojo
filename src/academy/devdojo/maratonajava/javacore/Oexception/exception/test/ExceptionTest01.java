@@ -23,5 +23,8 @@ public class ExceptionTest01 {
             // nesse exemplo, vamos somente imprimir a exceção no console
             e.printStackTrace();
         }
+
+        // removi da pasta arquivo a permissão de gravação
+        // logo, obtive a IOException de acesso negado
     }
 }
