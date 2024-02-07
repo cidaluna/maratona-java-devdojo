@@ -1,6 +1,7 @@
 package academy.devdojo.maratonajava.javacore.Sformatacao.test;
 
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Locale;
 
 public class NumberFormatTest01 {
@@ -12,7 +13,7 @@ public class NumberFormatTest01 {
         Locale localeIT = Locale.ITALY;
         NumberFormat[] nfa = new NumberFormat[4];
         System.out.println("--- Formatação de números ---");
-        nfa[0] = NumberFormat.getInstance();
+        nfa[0] = NumberFormat.getInstance();  // padrão no meu sistema operacional
         nfa[1] = NumberFormat.getInstance(localeJP);
         nfa[2] = NumberFormat.getInstance(localeBR);
         nfa[3] = NumberFormat.getInstance(localeIT);
@@ -20,6 +21,13 @@ public class NumberFormatTest01 {
         double valor = 10_000.2130;
         for(NumberFormat numberFormat: nfa){
             System.out.println(numberFormat.format(valor));
+        }
+
+        String valorString = "1_000.21";
+        try {
+            System.out.println(nfa[0].parse(valorString));
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
     }
 }
