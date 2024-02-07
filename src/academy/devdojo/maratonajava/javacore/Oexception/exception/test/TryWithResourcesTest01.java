@@ -1,15 +1,31 @@
 package academy.devdojo.maratonajava.javacore.Oexception.exception.test;
 
+import academy.devdojo.maratonajava.javacore.Oexception.exception.dominio.Leitor1;
+import academy.devdojo.maratonajava.javacore.Oexception.exception.dominio.Leitor2;
+
 import java.io.*;
 
 public class TryWithResourcesTest01{
     public static void main(String[] args) {
 
-
+        lerArquivo();
     }
 
+    public static void lerArquivo(){
+        // Realizando um try com recursos desde que a variável implemente a interface Closeable
+        // Ou seja, o Java se encarrega de fazer a chamada e fechar
+        // Neste caso podemos nao definir o bloco catch
+        // try(Reader reader = new BufferedReader(new FileReader("teste.txt"))){
+        try(Leitor1 leitor1 = new Leitor1();
+            Leitor2 leitor2 = new Leitor2(); // O java fecha na ordem inversa (2 e 1)
+        ){
 
-    public static void lerArquivo() {
+        }catch(IOException e){
+
+        }
+    }
+
+    public static void lerArquivo2() {
         // Classe Reader para leitura de arquivos
         // BufferedReader é mais otimizado por ser um buffer
         // FileReader trabalha com a exception FileNotFoundException
