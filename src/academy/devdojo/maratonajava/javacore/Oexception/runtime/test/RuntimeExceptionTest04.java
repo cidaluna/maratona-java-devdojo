@@ -1,6 +1,7 @@
 package academy.devdojo.maratonajava.javacore.Oexception.runtime.test;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class RuntimeExceptionTest04 {
@@ -15,15 +16,11 @@ public class RuntimeExceptionTest04 {
             // exemplo, throw new ArrayIndexOutOfBoundsException();
             // procurando pelo catch que melhor atende
             // qdo nao encontrar o catch específico, cai na generica, exemplo NullPointerException
-            throw new IndexOutOfBoundsException();
-        }catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("Dentro do ArrayIndexOutOfBoundsException");
+            throw new ArithmeticException();
+        }catch(ArrayIndexOutOfBoundsException | IllegalArgumentException | ArithmeticException e){
+            System.out.println("Dentro do ArrayIndexOutOfBoundsException | IllegalArgumentException | ArithmeticException");
         }catch(IndexOutOfBoundsException e){
             System.out.println("Dentro do IndexOutOfBoundsException");
-        }catch(IllegalArgumentException e){
-            System.out.println("Dentro do IllegalArgumentException");
-        }catch(ArithmeticException e){
-            System.out.println("Dentro do ArithmeticException");
         }catch(RuntimeException e){
             System.out.println("Dentro do RuntimeException");
         }
@@ -34,9 +31,7 @@ public class RuntimeExceptionTest04 {
         try{
             // chamando método
             talvezLanceException();
-        }catch(SQLException e){
-            e.printStackTrace();
-        }catch(FileNotFoundException e){
+        }catch(SQLException | IOException e){  // identifica a hierarquia de exceptions se nao estão na mesma linha de herança
             e.printStackTrace();
         }
     }
